@@ -10,4 +10,8 @@
     <string name="laboratorio_2">Laboratorio 2</string>
     <string name="sumar">Sumar</string>
     <string name="toast_message">Boton sumar presionado!</string>
+    <string name="ingresar_contrase_a">Ingresar contraseña</string>
+    <string name="ingresar_usuario">Ingresar usuario</string>
+    <string name="crear_usuario">Crear usuario</string>
+    <string name="iniciar_sesi_n">Iniciar sesión</string>
 </resources>
