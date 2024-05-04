@@ -4,23 +4,22 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/azul_marino"
+    android:background="@color/violet"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".SecondActivity">
 
     <TextView
-        android:id="@+id/main_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="20dp"
-        android:text="Hello World!"
+        android:layout_gravity="center"
+        android:text="@string/esta_es_la_segunda_activity"
         android:textColor="@color/white" />
 
-    <Button
-        android:id="@+id/main_button"
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hace click" />
-
+        android:text="@string/segundo_texto"
+        android:textColor="@color/white" />
 </LinearLayout>
