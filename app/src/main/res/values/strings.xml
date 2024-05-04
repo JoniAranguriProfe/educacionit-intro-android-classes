@@ -2,4 +2,10 @@
     <string name="app_name">MyFirstApp</string>
     <string name="esta_es_la_segunda_activity">Esta es la segunda activity</string>
     <string name="segundo_texto">Segundo texto</string>
+    <string name="labs_screen_title">Práctica curso Introducción a Android</string>
+    <string name="laboratorio_1">Laboratorio 1</string>
+    <string name="desafio_2">Desafio 2</string>
+    <string name="desafio_1">Desafio 1</string>
+    <string name="laboratorio_3">Laboratorio 3</string>
+    <string name="laboratorio_2">Laboratorio 2</string>
 </resources>
