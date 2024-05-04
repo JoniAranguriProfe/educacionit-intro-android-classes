@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MyFirstApp</string>
+    <string name="esta_es_la_segunda_activity">Esta es la segunda activity</string>
+    <string name="segundo_texto">Segundo texto</string>
 </resources>
