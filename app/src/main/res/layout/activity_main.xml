@@ -5,22 +5,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/azul_marino"
-    android:gravity="center"
+    android:gravity="start"
     android:orientation="vertical"
+    android:padding="24dp"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/main_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="20dp"
-        android:text="Hello World!"
-        android:textColor="@color/white" />
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        android:text="@string/labs_screen_title"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <Button
-        android:id="@+id/main_button"
-        android:layout_width="wrap_content"
+        android:id="@+id/button_lab_1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hace click" />
+        android:text="@string/laboratorio_1" />
+
+    <Button
+        android:id="@+id/button_lab_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/laboratorio_2" />
+
+    <Button
+        android:id="@+id/button_lab_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/laboratorio_3" />
+
+    <Button
+        android:id="@+id/button_challenge_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/desafio_1" />
+
+    <Button
+        android:id="@+id/button_challenge_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/desafio_2" />
 
 </LinearLayout>
