@@ -49,4 +49,10 @@
         android:layout_height="wrap_content"
         android:text="@string/desafio_2" />
 
+    <Button
+        android:id="@+id/button_integrator_project"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/proyecto_integrador" />
+
 </LinearLayout>

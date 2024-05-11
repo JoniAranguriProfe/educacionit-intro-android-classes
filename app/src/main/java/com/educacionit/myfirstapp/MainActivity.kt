@@ -6,6 +6,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.educacionit.myfirstapp.screens.Challenge1Activity
 import com.educacionit.myfirstapp.screens.Challenge2Activity
+import com.educacionit.myfirstapp.screens.IntegratorProjectActivity
 import com.educacionit.myfirstapp.screens.Lab1Activity
 import com.educacionit.myfirstapp.screens.Lab2Activity
 import com.educacionit.myfirstapp.screens.Lab3Activity
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var lab3Button: Button
     private lateinit var challenge1Button: Button
     private lateinit var challenge2Button: Button
+    private lateinit var integratorProjectButton: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -28,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         lab3Button = findViewById(R.id.button_lab_3)
         challenge1Button = findViewById(R.id.button_challenge_1)
         challenge2Button = findViewById(R.id.button_challenge_2)
+        integratorProjectButton = findViewById(R.id.button_integrator_project)
 
         lab1Button.setOnClickListener {
             openNewScreen(Lab1Activity::class.java)
@@ -43,6 +46,10 @@ class MainActivity : AppCompatActivity() {
         }
         challenge2Button.setOnClickListener {
             openNewScreen(Challenge2Activity::class.java)
+        }
+
+        integratorProjectButton.setOnClickListener {
+            openNewScreen(IntegratorProjectActivity::class.java)
         }
     }
 
