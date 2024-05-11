@@ -17,8 +17,10 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun getParamsFromIntent() {
-        val username = intent.extras?.getString(USER_PARAM_KEY)
-        showUserMessage("Bienvenido $username!")
+        val userObject: User? = intent.extras?.getSerializable(USER_OBJECT_PARAM_KEY) as? User
+        userObject?.let {
+            showUserMessage("Bienvenido ${it.username} desde un objeto serializable!")
+        }
     }
 
     private fun showUserMessage(message: String) {
@@ -28,5 +30,6 @@ class HomeActivity : AppCompatActivity() {
     companion object {
         const val USER_PARAM_KEY = "USER_PARAM_KEY"
         const val PASSWORD_PARAM_KEY = "PASSWORD_PARAM_KEY"
+        const val USER_OBJECT_PARAM_KEY = "PASSWORD_PARAM_KEY"
     }
 }

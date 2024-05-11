@@ -33,7 +33,7 @@ class IntegratorProjectActivity : AppCompatActivity() {
             showUserMessage("Hello world!")
             Log.i(logTag, "Se realizó un click en el boton de iniciar sesion")
 
-            if(validUserAndPassword()){
+            if (validUserAndPassword()) {
                 goToHomeActivity()
                 return@setOnClickListener
             }
@@ -44,9 +44,11 @@ class IntegratorProjectActivity : AppCompatActivity() {
     private fun goToHomeActivity() {
         val userInputValue = userEditText.text.toString()
         val passwordInputValue = passwordEditText.text.toString()
+        val userObject = User(username = userInputValue, password = passwordInputValue)
         val homeActivityIntent = Intent(this@IntegratorProjectActivity, HomeActivity::class.java)
         homeActivityIntent.putExtra(HomeActivity.USER_PARAM_KEY, userInputValue)
         homeActivityIntent.putExtra(HomeActivity.PASSWORD_PARAM_KEY, passwordInputValue)
+        homeActivityIntent.putExtra(HomeActivity.USER_OBJECT_PARAM_KEY, userObject)
         startActivity(homeActivityIntent)
         finish()
     }
