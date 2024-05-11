@@ -20,4 +20,11 @@
     <string name="tu_usuario">Tu usuario</string>
     <string name="fecha_de_nacimiento">Fecha de nacimiento</string>
     <string name="proyecto_integrador">Proyecto integrador</string>
+    <string name="user_label_login">Ingresar usuario</string>
+    <string name="user_hint_login">Su usuario</string>
+    <string name="password_label_login">Ingresar contraseña</string>
+    <string name="password_hint_login">Su contraseña</string>
+    <string name="remember_user_label_login">Recordar usuario</string>
+    <string name="create_user_button_login_text">Crear usuario</string>
+    <string name="signin_button_login_text">Iniciar sesión</string>
 </resources>
