@@ -48,6 +48,7 @@ class IntegratorProjectActivity : AppCompatActivity() {
         homeActivityIntent.putExtra(HomeActivity.USER_PARAM_KEY, userInputValue)
         homeActivityIntent.putExtra(HomeActivity.PASSWORD_PARAM_KEY, passwordInputValue)
         startActivity(homeActivityIntent)
+        finish()
     }
 
     private fun validUserAndPassword(): Boolean {
