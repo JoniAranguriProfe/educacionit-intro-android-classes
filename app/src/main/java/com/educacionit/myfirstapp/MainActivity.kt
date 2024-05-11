@@ -6,7 +6,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.educacionit.myfirstapp.screens.Challenge1Activity
 import com.educacionit.myfirstapp.screens.Challenge2Activity
-import com.educacionit.myfirstapp.screens.IntegratorProjectActivity
+import com.educacionit.myfirstapp.screens.integrator_project.IntegratorProjectActivity
 import com.educacionit.myfirstapp.screens.Lab1Activity
 import com.educacionit.myfirstapp.screens.Lab2Activity
 import com.educacionit.myfirstapp.screens.Lab3Activity

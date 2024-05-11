@@ -1,5 +1,6 @@
-package com.educacionit.myfirstapp.screens
+package com.educacionit.myfirstapp.screens.integrator_project
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -31,8 +32,28 @@ class IntegratorProjectActivity : AppCompatActivity() {
         signInButton.setOnClickListener {
             showUserMessage("Hello world!")
             Log.i(logTag, "Se realizó un click en el boton de iniciar sesion")
-            // Todo: Add real functionality in next commit
+
+            if(validUserAndPassword()){
+                goToHomeActivity()
+                return@setOnClickListener
+            }
+            showUserMessage("Completar datos")
         }
+    }
+
+    private fun goToHomeActivity() {
+        val userInputValue = userEditText.text.toString()
+        val passwordInputValue = passwordEditText.text.toString()
+        val homeActivityIntent = Intent(this@IntegratorProjectActivity, HomeActivity::class.java)
+        homeActivityIntent.putExtra(HomeActivity.USER_PARAM_KEY, userInputValue)
+        homeActivityIntent.putExtra(HomeActivity.PASSWORD_PARAM_KEY, passwordInputValue)
+        startActivity(homeActivityIntent)
+    }
+
+    private fun validUserAndPassword(): Boolean {
+        val userInputValue = userEditText.text.toString()
+        val passwordInputValue = passwordEditText.text.toString()
+        return userInputValue.isNotEmpty() && passwordInputValue.isNotEmpty()
     }
 
     private fun showUserMessage(message: String) {
