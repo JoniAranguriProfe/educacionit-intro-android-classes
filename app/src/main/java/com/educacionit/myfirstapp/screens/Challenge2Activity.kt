@@ -1,14 +1,12 @@
 package com.educacionit.myfirstapp.screens
 
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.educacionit.myfirstapp.R
 
 class Challenge2Activity : AppCompatActivity() {
@@ -25,22 +23,23 @@ class Challenge2Activity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        createUserButton.setOnClickListener {
-            // Obtener el valor de la fecha ingresada
-            val originalDate = birthDayEditText.text.toString()
-            // Validar que la fecha sea valida
-            val isDateValid: Boolean = isValidDate(originalDate)
-            // Mostrar mensaje de error o exito
-            val message = if (isDateValid) "Fecha valida" else "Fecha invalida"
-
-            Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
-        }
+        createUserButton.setOnClickListener(getOnclickCreateUserButtonListener())
         maintainSessionCheckBox.setOnCheckedChangeListener { _, isChecked ->
             val message =
                 if (isChecked) "Se mantendrá la sesion iniciada" else "Tendra que volver a loguearse"
 
             Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
         }
+    }
+
+    private fun getOnclickCreateUserButtonListener() = View.OnClickListener {
+        // Obtener el valor de la fecha ingresada
+        val originalDate = birthDayEditText.text.toString()
+        // Validar que la fecha sea valida
+        val isDateValid: Boolean = isValidDate(originalDate)
+        // Mostrar mensaje de error o exito
+        val message = if (isDateValid) "Fecha valida" else "Fecha invalida"
+        Toast.makeText(this@Challenge2Activity, message, Toast.LENGTH_SHORT).show()
     }
 
     private fun isValidDate(originalDate: String): Boolean {
