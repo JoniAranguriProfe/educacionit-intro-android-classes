@@ -1,52 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/azul_marino"
-    android:gravity="start"
-    android:orientation="vertical"
-    android:padding="24dp"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:gravity="center_horizontal"
-        android:text="@string/labs_screen_title"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/button_lab_1"
+    <LinearLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/laboratorio_1" />
+        android:background="@color/azul_marino"
+        android:gravity="start"
+        android:orientation="vertical"
+        android:padding="24dp"
+        tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button_lab_2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/laboratorio_2" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal"
+            android:text="@string/labs_screen_title"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/button_lab_3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/laboratorio_3" />
+        <Button
+            android:id="@+id/button_lab_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/laboratorio_1" />
 
-    <Button
-        android:id="@+id/button_challenge_1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/desafio_1" />
+        <Button
+            android:id="@+id/button_lab_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/laboratorio_2" />
 
-    <Button
-        android:id="@+id/button_challenge_2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/desafio_2" />
+        <Button
+            android:id="@+id/button_lab_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/laboratorio_3" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/button_challenge_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/desafio_1" />
+
+        <Button
+            android:id="@+id/button_challenge_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/desafio_2" />
+
+        <Button
+            android:id="@+id/button_integrator_project"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/proyecto_integrador" />
+
+        <Button
+            android:id="@+id/button_toolbar_example"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/using_toolbar" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nuevo ejercicio" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nuevo ejercicio" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nuevo ejercicio" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nuevo ejercicio" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nuevo ejercicio" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nuevo ejercicio" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nuevo ejercicio" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nuevo ejercicio" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nuevo ejercicio" />
+
+    </LinearLayout>
+</ScrollView>
