@@ -6,6 +6,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.educacionit.myfirstapp.R
@@ -16,6 +17,7 @@ class IntegratorProjectActivity : AppCompatActivity() {
     private lateinit var rememberUserCheckBox: CheckBox
     private lateinit var createUserButton: Button
     private lateinit var signInButton: Button
+    private lateinit var termsAndConditionsClickableText: TextView
     private val logTag = javaClass.toString()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +27,7 @@ class IntegratorProjectActivity : AppCompatActivity() {
         rememberUserCheckBox = findViewById(R.id.remember_user_checkbox)
         createUserButton = findViewById(R.id.create_user_button)
         signInButton = findViewById(R.id.sign_in_button)
+        termsAndConditionsClickableText = findViewById(R.id.terms_and_conditions_clickable_text)
         configureViews()
     }
 
@@ -38,6 +41,11 @@ class IntegratorProjectActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
             showUserMessage("Completar datos")
+        }
+        termsAndConditionsClickableText.setOnClickListener {
+            val termsAndConditionsIntent =
+                Intent(this@IntegratorProjectActivity, TermsAndConditionsActivity::class.java)
+            startActivity(termsAndConditionsIntent)
         }
     }
 
