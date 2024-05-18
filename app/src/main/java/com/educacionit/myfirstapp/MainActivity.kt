@@ -10,6 +10,7 @@ import com.educacionit.myfirstapp.screens.integrator_project.IntegratorProjectAc
 import com.educacionit.myfirstapp.screens.Lab1Activity
 import com.educacionit.myfirstapp.screens.Lab2Activity
 import com.educacionit.myfirstapp.screens.Lab3Activity
+import com.educacionit.myfirstapp.screens.ToolbarExampleActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var lab1Button: Button
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var challenge1Button: Button
     private lateinit var challenge2Button: Button
     private lateinit var integratorProjectButton: Button
+    private lateinit var toolbarExampleButton: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -31,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         challenge1Button = findViewById(R.id.button_challenge_1)
         challenge2Button = findViewById(R.id.button_challenge_2)
         integratorProjectButton = findViewById(R.id.button_integrator_project)
+        toolbarExampleButton = findViewById(R.id.button_toolbar_example)
 
         lab1Button.setOnClickListener {
             openNewScreen(Lab1Activity::class.java)
@@ -50,6 +53,10 @@ class MainActivity : AppCompatActivity() {
 
         integratorProjectButton.setOnClickListener {
             openNewScreen(IntegratorProjectActivity::class.java)
+        }
+
+        toolbarExampleButton.setOnClickListener {
+            openNewScreen(ToolbarExampleActivity::class.java)
         }
     }
 

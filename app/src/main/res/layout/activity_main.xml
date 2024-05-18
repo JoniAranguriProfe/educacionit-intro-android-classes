@@ -60,9 +60,10 @@
             android:text="@string/proyecto_integrador" />
 
         <Button
+            android:id="@+id/button_toolbar_example"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nuevo ejercicio" />
+            android:text="@string/using_toolbar" />
 
         <Button
             android:layout_width="match_parent"

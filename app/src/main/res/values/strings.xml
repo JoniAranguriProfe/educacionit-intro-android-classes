@@ -27,4 +27,6 @@
     <string name="remember_user_label_login">Recordar usuario</string>
     <string name="create_user_button_login_text">Crear usuario</string>
     <string name="signin_button_login_text">Iniciar sesión</string>
+    <string name="using_toolbar">Usando toolbar</string>
+    <string name="mark_as_favorite">Mark as Favorite</string>
 </resources>
