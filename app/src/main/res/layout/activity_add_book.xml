@@ -5,14 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".screens.integrator_project.HomeActivity">
+    tools:context=".screens.integrator_project.AddBookActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/books_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/violet"
-        app:title="@string/my_books_title"
+        app:title="@string/add_book"
         android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
 
 </LinearLayout>

@@ -40,8 +40,17 @@
         android:id="@+id/remember_user_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
         android:text="@string/remember_user_label_login" />
+
+    <TextView
+        android:id="@+id/terms_and_conditions_clickable_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        android:textSize="12sp"
+        android:textColor="@color/gray"
+        android:text="@string/terms_and_conditions_title" />
 
     <LinearLayout
         android:layout_width="match_parent"

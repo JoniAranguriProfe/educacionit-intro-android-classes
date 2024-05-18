@@ -29,4 +29,9 @@
     <string name="signin_button_login_text">Iniciar sesión</string>
     <string name="using_toolbar">Usando toolbar</string>
     <string name="mark_as_favorite">Mark as Favorite</string>
+    <string name="terms_and_conditions_title">Términos y condiciones</string>
+    <string name="terms_and_conditions_test_content">Este es un texto de prueba solamente para poder previsualizarlo en el editor pero no se va a ver en la ejecucion</string>
+    <string name="books_app_title">Books App</string>
+    <string name="my_books_title">Mis Libros</string>
+    <string name="add_book">Add book</string>
 </resources>
