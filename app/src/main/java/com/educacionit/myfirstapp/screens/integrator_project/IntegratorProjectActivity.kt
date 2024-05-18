@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.CheckBox
+import android.widget.CompoundButton
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -47,6 +48,33 @@ class IntegratorProjectActivity : AppCompatActivity() {
                 Intent(this@IntegratorProjectActivity, TermsAndConditionsActivity::class.java)
             startActivity(termsAndConditionsIntent)
         }
+
+        rememberUserCheckBox.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                saveCurrentUsername()
+            } else {
+                deleteCurrentUsername()
+            }
+        }
+
+        getSavedUsername()
+    }
+
+    private fun deleteCurrentUsername() {
+        val sharedPreferences = getSharedPreferences(LOGIN_PREFERENCES, MODE_PRIVATE)
+        sharedPreferences.edit().remove(USERNAME_PREFERENCE_KEY).apply()
+    }
+
+    private fun saveCurrentUsername() {
+        val currentUsername = userEditText.text.toString()
+        val sharedPreferences = getSharedPreferences(LOGIN_PREFERENCES, MODE_PRIVATE)
+        sharedPreferences.edit().putString(USERNAME_PREFERENCE_KEY, currentUsername).apply()
+    }
+
+    private fun getSavedUsername() {
+        val sharedPreferences = getSharedPreferences(LOGIN_PREFERENCES, MODE_PRIVATE)
+        val savedUsername = sharedPreferences.getString(USERNAME_PREFERENCE_KEY, "")
+        userEditText.setText(savedUsername)
     }
 
     private fun goToHomeActivity() {
@@ -69,5 +97,10 @@ class IntegratorProjectActivity : AppCompatActivity() {
 
     private fun showUserMessage(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+
+    companion object {
+        const val USERNAME_PREFERENCE_KEY = "USERNAME"
+        const val LOGIN_PREFERENCES = "LOGIN_PREFERENCES"
     }
 }
