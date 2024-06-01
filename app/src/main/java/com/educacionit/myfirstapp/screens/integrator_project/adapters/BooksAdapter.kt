@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.educacionit.myfirstapp.R
 import com.educacionit.myfirstapp.screens.integrator_project.model.Book
 
-class BooksAdapter(private var bookList: List<Book> = emptyList()) :
+class BooksAdapter(var bookList: List<Book> = emptyList()) :
     RecyclerView.Adapter<BooksAdapter.BooksViewHolder>() {
 
         private var onBookClickListener: OnBookClickListener? = null

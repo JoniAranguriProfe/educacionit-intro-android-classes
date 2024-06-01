@@ -1,5 +1,7 @@
 package com.educacionit.myfirstapp.screens.integrator_project
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -44,9 +46,14 @@ class AddBookActivity : AppCompatActivity() {
             return
         }
 
-        // TODO: Implement logic to send Book to previous screen
         val newBook = Book(title = inputTitle, author = inputAuthor)
-        Toast.makeText(this, newBook.toString(), Toast.LENGTH_SHORT).show()
+
+        setResult(Activity.RESULT_OK, Intent().putExtra(NEW_BOOK_EXTRA, newBook))
         finish()
+    }
+
+
+    companion object {
+        const val NEW_BOOK_EXTRA = "NEW_BOOK_EXTRA"
     }
 }

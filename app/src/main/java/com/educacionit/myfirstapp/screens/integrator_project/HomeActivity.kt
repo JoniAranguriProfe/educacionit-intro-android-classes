@@ -1,5 +1,6 @@
 package com.educacionit.myfirstapp.screens.integrator_project
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
@@ -7,6 +8,10 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.activity.result.ActivityResult
+import androidx.activity.result.ActivityResultCallback
+import androidx.activity.result.contract.ActivityResultContract
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.lifecycleScope
@@ -22,6 +27,11 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var booksRecyclerView: RecyclerView
     private lateinit var booksAdapter: BooksAdapter
     private lateinit var loadingView: ProgressBar
+    private var startForResult =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            handleAddBookResult(it)
+        }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
@@ -42,10 +52,7 @@ class HomeActivity : AppCompatActivity() {
                 Toast.makeText(this@HomeActivity, book.title, Toast.LENGTH_LONG).show()
             }
         })
-    }
 
-    override fun onResume() {
-        super.onResume()
         lifecycleScope.launch {
             loadingView.visibility = View.VISIBLE
             booksAdapter.setBooks(BooksRepository.geBooks())
@@ -74,7 +81,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun goToAddBookActivity() {
         val addBookActivityIntent = Intent(this@HomeActivity, AddBookActivity::class.java)
-        startActivity(addBookActivityIntent)
+        startForResult.launch(addBookActivityIntent)
     }
 
     private fun getParamsFromIntent() {
@@ -86,6 +93,23 @@ class HomeActivity : AppCompatActivity() {
 
     private fun showUserMessage(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+
+    private fun handleAddBookResult(result: ActivityResult?) {
+        if (result?.resultCode == Activity.RESULT_OK) {
+            val newBook = result.data?.getSerializableExtra(AddBookActivity.NEW_BOOK_EXTRA) as? Book
+            newBook?.let { safeBook ->
+                updateBookList(safeBook)
+            }
+        }
+    }
+
+    private fun updateBookList(newBook: Book) {
+        val updatedBookList: MutableList<Book> =
+            mutableListOf(*booksAdapter.bookList.toTypedArray())
+        updatedBookList.add(newBook)
+
+        booksAdapter.setBooks(updatedBookList)
     }
 
     companion object {
