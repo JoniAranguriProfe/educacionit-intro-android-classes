@@ -34,4 +34,10 @@
     <string name="books_app_title">Books App</string>
     <string name="my_books_title">Mis Libros</string>
     <string name="add_book">Add book</string>
+    <string name="add_book_title">Agregar Libro</string>
+    <string name="save">Guardar</string>
+    <string name="author_hint">Autor del libro</string>
+    <string name="author_label">Autor</string>
+    <string name="book_title_hint">Titulo del libro</string>
+    <string name="title_name">Nombre del libro</string>
 </resources>
